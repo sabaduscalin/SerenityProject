@@ -36,11 +36,11 @@ public class LoginSteps {
         Assert.assertEquals(expected, message);
     }
 
-    @Step
-    public void login(String email, String pass, String username){
-        navigateToLoginPage();
-        setCredentials(email, pass);
-        clickLogin();
-        checkLoggedIn(username);
+   // @Step
+  //  public void login(String email, String pass, String username){
+    //    navigateToLoginPage();
+      //  setCredentials(email, pass);
+        //clickLogin();
+        //checkLoggedIn(username);
     }
-}
+//}

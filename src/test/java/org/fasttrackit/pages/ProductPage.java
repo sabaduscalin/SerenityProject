@@ -15,9 +15,16 @@ public class ProductPage extends PageObject {
     private WebElementFacade viewDetailsButton;
     @FindBy(css = " div.product-name > span")
     private WebElementFacade viewMessage;
+    @FindBy(css = "#swatch18 > span.swatch-label > img")
+    private WebElementFacade color;
+    @FindBy(css = "#swatch78 > span.swatch-label")
+    private WebElementFacade size;
+
+    @FindBy(css = " div.add-to-cart-buttons > button > span > span")
+    private WebElementFacade addToCart;
 
     public String getViewMessage() {
-    return viewMessage.getText();
+        return viewMessage.getText();
     }
 
     public void clickViewDetails() {
@@ -27,4 +34,17 @@ public class ProductPage extends PageObject {
     public void clickSale() {
         clickOn(saleButton);
     }
+
+    public void setAddToCart() {
+        clickOn(addToCart);
+    }
+
+    public void setColor() {
+        clickOn(color);
+    }
+
+    public void setSize() {
+        clickOn(size);
+    }
+
 }

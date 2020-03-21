@@ -12,13 +12,15 @@ import org.openqa.selenium.WebDriver;
 public class CartTest extends BaseTest {
 
     @Steps
-    CartSteps cartSteps;
+    private CartSteps cartSteps;
+
     @Test
-    public void navigateToCart(){
+    public void navigateToCart() {
         cartSteps.navigateToLoginPage();
-        cartSteps.setCredentials("sabadus.calin@mailinator.com","123456");
+        cartSteps.setCredentials("sabadus.calin@mailinator.com", "123456");
         cartSteps.clickLogin();
         cartSteps.clickCart();
         cartSteps.clickShoppingCart();
+        cartSteps.checkText("SHOPPING CART");
     }
 }

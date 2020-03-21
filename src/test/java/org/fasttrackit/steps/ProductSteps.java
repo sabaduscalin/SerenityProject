@@ -32,16 +32,27 @@ public class ProductSteps {
     public void clickSale() {
         productPage.clickSale();
     }
+
     @Step
-    public void clickViewDetails(){
+    public void clickViewDetails() {
         productPage.clickViewDetails();
     }
+
     @Step
-    public void checkmessage(String expected){
-        String message= productPage.getViewMessage();
-        Assert.assertEquals(expected,message);
+    public void checkmessage(String expected) {
+        String message = productPage.getViewMessage();
+        Assert.assertEquals(expected, message);
+    }
 
+    @Step
+    public void selectMandatoryFeald() {
+        productPage.setColor();
+        productPage.setSize();
+    }
 
+    @Step
+    public void clickAddToCart() {
+        productPage.setAddToCart();
     }
 }
 

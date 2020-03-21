@@ -7,16 +7,23 @@ import net.thucydides.core.annotations.DefaultUrl;
 
 @DefaultUrl("http://testfasttrackit.info/selenium-test/checkout/onepage/")
 public class CartPage extends PageObject {
-    @FindBy(css="#header > div > div.skip-links > div > div > a > span.label")
+    @FindBy(css = "#header > div > div.skip-links > div > div > a > span.label")
     private WebElementFacade cartButton;
-    @FindBy(css="#header-cart > div.minicart-wrapper > div.minicart-actions > a")
+    @FindBy(css = "#header-cart > div.minicart-wrapper > div.minicart-actions > a")
     private WebElementFacade shopingCartButton;
+    @FindBy(css = "div.page-title.title-buttons > h1")
+    private WebElementFacade textCart;
 
-    public void clickCart(){
+
+    public void clickCart() {
         clickOn(cartButton);
     }
-    public void clickShopingCart(){
+
+    public void clickShopingCart() {
         clickOn(shopingCartButton);
     }
 
+    public String getcheckText() {
+        return textCart.getText();
+    }
 }

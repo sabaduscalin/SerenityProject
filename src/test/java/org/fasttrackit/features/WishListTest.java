@@ -15,17 +15,18 @@ import org.openqa.selenium.WebDriver;
 public class WishListTest extends BaseTest {
 
     @Steps
-    private HomePage homePage;
-    @Steps
     private MyWishListSteps myWishListSteps;
-    @Steps
-    private LoginSteps loginSteps;
 
     @Test
     public void addToWishList() {
-        loginSteps.login("sabadus.calin@mailinator.com", "123456", "Hello, Sabadus Calin!");
-        homePage.clickAccount();
-        myWishListSteps.navigateToWishlistPage();
+        myWishListSteps.navigateHomePage();
+        myWishListSteps.setCredentials("sabadus.calin@mailinator.com","123456");
+        myWishListSteps.navigateToAcount();
+        myWishListSteps.navigateToWishList();
+        myWishListSteps.navigateToProduct();
+        myWishListSteps.checkProductName("PARK ROW THROW");
+
+
 
     }
 

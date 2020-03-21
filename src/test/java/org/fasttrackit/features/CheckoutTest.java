@@ -22,8 +22,15 @@ public class CheckoutTest extends BaseTest {
 
 
     @Test
-    public void navigateToCheckout(){
-        checkoutSteps.clickCheckout();
-
+    public void tryToCheckout(){
+        checkoutSteps.navogateToLoginPage();
+        checkoutSteps.setCredentials("sabadus.calin@mailinator.com", "123456");
+        checkoutSteps.clickLogin();
+        checkoutSteps.addProductToCart();
+        checkoutSteps.goToAccount();
+        checkoutSteps.completFeald();
+        checkoutSteps.checkText("THANK YOU FOR YOUR PURCHASE!");
     }
+
+
 }

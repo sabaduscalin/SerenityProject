@@ -5,6 +5,7 @@ import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.LoginPage;
 import org.fasttrackit.pages.MyAccountPage;
+import org.junit.Assert;
 
 public class CartSteps {
 
@@ -38,5 +39,12 @@ public class CartSteps {
     @Step
     public void clickShoppingCart(){
         cartPage.clickShopingCart();
+    }
+    @Step
+    public void checkText(String expected){
+
+        String messege=cartPage.getcheckText();
+        Assert.assertEquals(messege,expected);
+
     }
 }

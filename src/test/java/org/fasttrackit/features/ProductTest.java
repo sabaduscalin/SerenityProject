@@ -22,6 +22,8 @@ public class ProductTest extends BaseTest {
         productSteps.clickSale();
         productSteps.clickViewDetails();
         productSteps.checkmessage("RACER BACK MAXI DRESS");
+        productSteps.selectMandatoryFeald();
+        productSteps.clickAddToCart();
 
     }
 }
